@@ -1,0 +1,10 @@
+
+pages == https://pages.github.com/
+
+git clone URL
+
+git add --all
+
+git commit -m "Initial commit"
+
+git push -u origin master

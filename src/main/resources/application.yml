@@ -1,0 +1,61 @@
+# 项目信息配置
+project:
+  env: development
+
+# 服务器配置
+#server:
+#  tomcat:
+#    uri-encoding: UTF-8
+#    max-threads: 1000
+#    min-spare-threads: 30
+#  port: 443
+#  ssl:
+#    key-store: classpath:ser.jks
+#    key-store-password: stu8VwdD
+#    key-alias: alias
+#    key-password: stu8VwdD
+
+#http:
+#  port: 9988
+
+server:
+  port: 9900
+
+# Spring配置
+spring:
+  # 数据源配置
+  datasource:
+    url: jdbc:mysql://45.144.243.170:3306/wechatdb?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: hzx2019
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  jackson:
+    time-zone: GMT+8
+    ## 默认日期格式化
+    date-format: yyyy-MM-dd HH:mm:ss
+  application:
+    name: hzx-workflow
+
+# MyBatis配置
+#mybatis:
+#  mapper-locations: classpath:/mapper/*.xml #对应mappers映射xml文件的所在路径
+#  configuration:
+#    map-underscore-to-camel-case: true # 使用resultType时自动将下划线转为驼峰命名
+
+
+
+# 日志配置
+logback:
+  level: INFO
+  appender: ${project.env}
+
+
+# MyBatis plus配置
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  global-config:
+    db-config:
+      db-type: mysql
+  configuration:
+    call-setters-on-nulls: true
