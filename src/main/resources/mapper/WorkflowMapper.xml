@@ -4,32 +4,9 @@
 
     <select id="list_work" resultType="com.api.entity.Workflow" parameterType="string">
 
-      select * from workflow where is_delete=0
+      select * from Workflow where is_delete=1
 
     </select>
 
-    <select id="listById" parameterType="java.lang.Long" resultType="com.api.entity.Workflow">
-
-        select * from workflow where w_id=#{wId}
-
-    </select>
-
-    <update id="addDown" parameterType="java.lang.Long">
-
-        update workflow t set t.down =t.down+1 where w_id = #{wId}
-
-    </update>
-
-    <update id="addView" parameterType="java.lang.Long">
-
-        update workflow t set t.view =t.view+1 where w_id = #{wId}
-
-    </update>
-
-    <select id="listByTId" resultType="com.api.entity.Workflow" parameterType="java.lang.Long">
-
-        select * from workflow where t_id = #{tId}
-
-    </select>
 
 </mapper>

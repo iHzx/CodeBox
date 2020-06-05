@@ -31,23 +31,4 @@ public class WorkflowServiceImpl extends ServiceImpl<WorkflowMapper, Workflow> i
         return dao.list_work();
     }
 
-    @Override
-    public Workflow listById(Long wid) {
-        return dao.listById(wid);
-    }
-
-    @Override
-    public Integer addDown(Long wid) {
-        return dao.addDown(wid);
-    }
-
-    @Override
-    public Integer addView(Long wid) {
-        return dao.addView(wid);
-    }
-
-    @Override
-    public List<Workflow> listByTId(Long tid) {
-        return dao.listByTId(tid);
-    }
 }

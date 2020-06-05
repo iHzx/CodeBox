@@ -18,12 +18,4 @@ public interface WorkflowMapper extends BaseMapper<Workflow> {
 
     List<Workflow> list_work();
 
-    Workflow listById(Long wid);
-
-    Integer addDown(Long wid);
-
-    Integer addView(Long wid);
-
-    List<Workflow> listByTId(Long tid);
-
 }
