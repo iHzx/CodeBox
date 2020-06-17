@@ -29,10 +29,10 @@ public class CodeBoxApplication {
         ApplicationContext context = SpringApplication.run(CodeBoxApplication.class,args);
         Environment env = context.getEnvironment();
         log.info("====================================================================");
-        log.info("Project Environment:     {}", env.getProperty("project.env"));
-        log.info("Server Port:             {}", env.getProperty("server.port"));
-        log.info("Logging Level:           {}", env.getProperty("logback.level"));
-        log.info("Startup complete ...");
+        log.info("程序环境:                {}", env.getProperty("spring.profiles.active"));
+        log.info("程序端口:                {}", env.getProperty("server.port"));
+        log.info("Startup complete (启动完成)...");
+//        log.info("Logging Level:           {}", env.getProperty("logback.level"));
         log.info("====================================================================");
     }
 
